@@ -1,0 +1,119 @@
+.section
+    width: 100%
+    height: 100%
+.abacasino
+    height: 937px
+    overflow: hidden
+    position: relative
+    &__background 
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__background-grass
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: absolute
+        left: 0px
+        z-index: 50
+    &__title
+        position: absolute
+        top: 40px
+        left: calc( 50% - 100px )
+    &__singer
+        position: absolute
+        bottom: 40px
+        left: calc(50% - 40%)
+    &__man
+        position: absolute
+        bottom: -10px
+        right: calc(50% - 45%)
+    &__chipsMany
+        position: absolute
+        top: 0px
+        right: 100px
+    &__chips
+        position: absolute
+        top: 30%
+        left: 26%
+    &__drum
+        width: 50px
+        height: 50px
+        position: absolute
+        top: calc( 50% - 250px )
+        left: calc( 50% - 250px )
+        z-index: 50
+    &__circle
+        position: absolute
+        top: 2px
+        left: 2px
+        z-index: 40
+    &__stars
+        position: absolute
+        top: 8px
+        left: 2px
+        z-index: 50
+    &__button
+        background-color: transparent
+        border: none
+        outline: none
+        position: absolute
+        top: 162px
+        left: 175px
+        z-index: 100
+        cursor: pointer
+    &__colors
+        position: absolute
+        top: 10px 
+        left: 10px
+        transition: 5s
+        animation: rotating 3s linear infinite   
+    .abacasino__button:focus ~ .abacasino__colors
+        animation-play-state: paused, running, running
+    &__arrow
+        position: absolute
+        top: -18px
+        left: 230px
+        z-index: 60        
+    @keyframes rotating
+        from
+            transform: rotate(0deg)
+        to
+            transform: rotate(360deg)
+
+@media (max-width: 1440px)
+    .section
+        max-width: 1440px
+        height: 100%
+        .abacasino
+            max-height: 780px
+            &__title
+                top: 24px
+                left: calc( 50% - 123px )
+            &__chipsMany
+                right: 113px
+            &__drum
+                top: calc( 50% - 291px )
+                left: calc( 50% - 269px )
+            &__singer 
+                bottom: 56px
+                left: calc(50% - 45%)
+            &__man 
+                bottom: 0px
+                right: calc(50% - 48.5%)
+            &__chips
+                top: 6%
+                left: 23%
+@media (max-width: 1280px)
+    .section
+        max-width: 1440px
+        height: 100%
+        .abacasino
+            &__man
+                right: calc(50% - 53.5%)
+            &__singer 
+                left: calc(50% - 49%)
+            &__chips
+                left: 20%
+            &__chipsMany
+                right: 50px
